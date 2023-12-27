@@ -51,6 +51,7 @@ const App = () => {
 						<Navbar />
 						<Sidebar />
 						{currentSong && <AudioPlayer />}
+			
 					</Fragment>
 				)}
 			<Switch>

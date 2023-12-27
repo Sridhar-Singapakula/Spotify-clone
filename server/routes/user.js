@@ -7,12 +7,12 @@ const auth=require("../middleware/auth")
 
 
 router.post("/", async (req, res) => {
-	console.log('hello')
   const { error } = validate(req.body);
 	if (error) return res.status(400).send({ message: error.details[0].message });
 
-	const user = await User.findOne({ email: req.body.email });
+	const user = await User.findOne({ email: req.body.email },{ maxTimeMS: 20000 });
 	if (user)
+	    
 		return res
 			.status(403)
 			.send({ message: "User with given email already Exist!" });

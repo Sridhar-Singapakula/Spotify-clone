@@ -19,7 +19,7 @@ const companyLInks = ["About", "Jobs", "For the record"];
 
 const communitiesLinks = [
 	"For Artists",
-	"Developers",
+	"ME226",
 	"Advertising",
 	"Investors",
 	"Vendors",
@@ -81,8 +81,8 @@ const Main = () => {
 					<div className={styles.footer_1_links}>
 						<div className={styles.footer_heading}>Communities</div>
 						{communitiesLinks.map((link, index) => (
-							<div className={styles.links} key={index}>
-								{link}
+							<div className={styles.links} key={index} >
+								<a href="https://iitbacin-my.sharepoint.com/personal/190100088_iitb_ac_in/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2F190100088%5Fiitb%5Fac%5Fin%2FDocuments%2FMaster%5FDrive%5FPB%2FMech%5FResources%2FMech%5F4th%2Dsem%282019%2D23%29%2FME%20226" target="_blank">{link}</a>
 							</div>
 						))}
 					</div>

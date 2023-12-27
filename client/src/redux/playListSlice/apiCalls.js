@@ -20,9 +20,7 @@ export const addSongToPlaylist = async (payload, dispatch) => {
 	dispatch(actions.addSongStart());
 	
 	try {
-		console.log("hello")
 		const { data } = await axiosInstance.put(apiUrl + "/add-song", payload);
-		console.log(data)
 		dispatch(actions.addSongSuccess(data.data));
 		toast.success(data.message);
 		return true;
